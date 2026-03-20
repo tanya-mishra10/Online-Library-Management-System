@@ -1,0 +1,82 @@
+.layout{
+  display:flex;
+  height:100vh;
+}
+
+/* Sidebar */
+
+.sidebar{
+  width:220px;
+  background:#1e293b;
+  color:white;
+  padding:20px;
+}
+
+.sidebar h2{
+  margin-bottom:30px;
+}
+
+.sidebar ul{
+  list-style:none;
+  padding:0;
+}
+
+.sidebar li{
+  padding:10px;
+  cursor:pointer;
+}
+
+.sidebar li:hover{
+  background:#334155;
+}
+
+
+/* Main Content */
+
+.main{
+  flex:1;
+  background:#f1f5f9;
+}
+
+/* Cards */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  padding:20px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card p{
+  font-size:28px;
+  font-weight:bold;
+}
+
+
+/* Quick Actions */
+
+.actions{
+  padding:20px;
+}
+
+.actions button{
+  margin-right:10px;
+  padding:10px 15px;
+  border:none;
+  background:#2563eb;
+  color:white;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.actions button:hover{
+  background:#1d4ed8;
+}

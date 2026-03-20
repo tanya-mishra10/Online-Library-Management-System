@@ -1,0 +1,66 @@
+<div class="layout">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+
+    <h2>Library Admin</h2>
+
+    <ul>
+      <li routerLink="/dashboard">Dashboard</li>
+      <li routerLink="/book">Books</li>
+      <li routerLink="/student">Students</li>
+      <li routerLink="/issue-book">Issue Book</li>
+      <li mat-button [matMenuTriggerFor]="settingsMenu">Settings</li>
+      <mat-menu #settingsMenu="matMenu">
+        <li mat-menu-item routerLink="/admin-profile">Profile</li>
+        <li mat-menu-item routerLink="/change-password">Change Password</li>
+      </mat-menu>
+    </ul>
+
+  </div>
+
+
+  <!-- Main Content -->
+  <div class="main">
+
+    <!-- Dashboard Cards -->
+    <div class="cards">
+
+      <div class="card">
+        <h4>Total Books</h4>
+        <p>{{getAllBooks}}</p>
+      </div>
+
+      <div class="card">
+        <h4>Total Students</h4>
+        <p>{{getAllStudent}}</p>
+      </div>
+
+      <div class="card">
+        <h4>Issued Books</h4>
+        <p>{{getAll}}</p>
+      </div>
+
+      <div class="card">
+        <h4>Available Books</h4>
+        <p>{{availableBooks}}</p>
+      </div>
+
+    </div>
+
+
+    <!-- Quick Actions -->
+    <div class="actions">
+
+      <h3>Quick Actions</h3>
+
+      <button routerLink="/book-form">Add Book</button>
+      <button routerLink="/student-form">Add Student</button>
+      <button routerLink="/issue-form">Issue Book</button>
+      <button routerLink="/admin-form">Add Admin</button>
+
+    </div>
+
+  </div>
+
+</div>

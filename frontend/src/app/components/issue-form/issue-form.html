@@ -1,0 +1,57 @@
+<div class="issue-container">
+
+  <h2>Issue Book</h2>
+
+  <form (ngSubmit)="onSubmit()" #issueForm="ngForm">
+
+    <div class="form-group">
+      <label>Book ID</label>
+      <input 
+        type="number"
+        name="book_id"
+        [(ngModel)]="issue.book.book_id"
+        required
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>Student ID</label>
+      <input 
+        type="number"
+        name="student_id"
+        [(ngModel)]="issue.student.student_id"
+        required
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>Issue Date</label>
+      <input 
+        type="date"
+        name="issueDate"
+        [(ngModel)]="issue.issueDate"
+        required
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>Return Date</label>
+      <input 
+        type="date"
+        name="returnDate"
+        [(ngModel)]="issue.returnDate"
+        required
+        class="form-control"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+      Issue Book
+    </button>
+
+  </form>
+
+</div>

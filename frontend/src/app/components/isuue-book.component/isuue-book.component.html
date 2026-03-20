@@ -1,0 +1,46 @@
+<div class="issue-container">
+
+<h2>List Of Issue Books</h2>
+
+<table>
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Issue Date</th>
+<th>Return Date</th>
+<th>Student-ID</th>
+<th>Book-ID</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr *ngFor="let issue of issueBooks">
+
+<td>{{issue.id}}</td>
+<td>{{issue.issueDate}}</td>
+<td>{{issue.returnDate}}</td>
+<td>{{issue.student.id}}</td>
+<td>{{issue.book.book_id}}</td>
+
+<td>
+<button (click)="returnBook(issue.id)">Return</button>
+</td>
+
+</tr>
+
+</tbody>
+<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<mat-paginator
+[length]="totalElements"
+[pageSize]="pageSize"
+[pageSizeOptions]="[7]"
+(page)="pageChanged($event)">
+</mat-paginator>
+
+</div>

@@ -1,0 +1,20 @@
+<div class="profile-card" *ngIf="adminDetails">
+
+  <h2>Admin Profile</h2>
+
+  <div class="profile-item">
+    <label>Admin ID:</label>
+    <span>{{adminDetails?.adminId}}</span>
+  </div>
+
+  <div class="profile-item">
+    <label>Email:</label>
+    <span>{{adminDetails?.email}}</span>
+  </div>
+
+  <div class="profile-item">
+    <label>Role:</label>
+    <span>{{adminDetails?.role}}</span>
+  </div>
+
+</div>

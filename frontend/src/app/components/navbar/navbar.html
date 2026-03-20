@@ -1,0 +1,7 @@
+<mat-toolbar color="primary">
+  <span>📚 Library Management System</span>
+  <span class="exmple-spacer"></span>
+  <a mat-button routerLink="/" class="active">Home</a>
+  <a mat-button *ngIf="!loggedIn" routerLink="/login">Login</a>
+  <a mat-button *ngIf="loggedIn" (click)="logoutAdmin()">Logout</a>
+</mat-toolbar>

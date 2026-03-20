@@ -1,0 +1,18 @@
+<div class="form-container mt-4">
+
+<h2>Add Admin</h2>
+
+<form (ngSubmit)="onSubmit()">
+
+<label>Email</label>
+<input type="email" [(ngModel)]="admin.email" name="email" required>
+
+<label>Password</label>
+<input type="password" [(ngModel)]="admin.password" name="password" required>
+
+<button type="submit">Save Admin</button>
+
+</form>
+
+</div>
+

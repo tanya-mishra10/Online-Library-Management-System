@@ -1,0 +1,52 @@
+<div class="books-container">
+
+<h2>Books List</h2>
+
+<table>
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Title</th>
+<th>Author</th>
+<th>Category</th>
+<th>Available</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr *ngFor="let book of books">
+
+<td>{{book.book_id}}</td>
+<td>{{book.title}}</td>
+<td>{{book.author}}</td>
+<td>{{book.category}}</td>
+
+
+<td>
+<span *ngIf="book.available">Available</span>
+<span *ngIf="!book.available">Issued</span>
+</td>
+
+<td>
+<button (click)="deleteBook(book.book_id)">Delete</button>
+</td>
+
+</tr>
+
+</tbody>
+<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>
+
+<mat-paginator
+[length]="totalElements"
+[pageSize]="pageSize"
+[pageSizeOptions]="[7]"
+(page)="pageChanged($event)">
+</mat-paginator>
+
+</div>
